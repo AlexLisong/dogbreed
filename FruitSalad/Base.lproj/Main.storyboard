@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.3.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FruitSalad" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4K1-FL-hWQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yTD-Ob-HM8">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="jBq-q7-EZt"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="Hki-j6-N9d">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="cameraBtnWasPressed:" destination="BYZ-38-t0r" id="rsW-GU-1cT"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </toolbar>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KWy-if-Btp">
+                                <rect key="frame" x="20" y="523" width="335" height="80"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="A8G-VS-law">
+                                    <rect key="frame" x="0.0" y="0.0" width="335" height="80"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose an image below." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="8ag-A8-IXW">
+                                            <rect key="frame" x="8" y="8" width="319" height="64"/>
+                                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="8ag-A8-IXW" firstAttribute="top" secondItem="A8G-VS-law" secondAttribute="top" constant="8" id="AM7-si-ibi"/>
+                                        <constraint firstItem="8ag-A8-IXW" firstAttribute="leading" secondItem="A8G-VS-law" secondAttribute="leading" constant="8" id="euY-xX-OcU"/>
+                                        <constraint firstAttribute="trailing" secondItem="8ag-A8-IXW" secondAttribute="trailing" constant="8" id="gGd-T7-K4B"/>
+                                        <constraint firstAttribute="bottom" secondItem="8ag-A8-IXW" secondAttribute="bottom" constant="8" id="iRe-8m-VgK"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Afz-kw-8D5"/>
+                                </constraints>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KWy-if-Btp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ALq-9K-zxG"/>
+                            <constraint firstItem="4K1-FL-hWQ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="GNs-Pd-E2X"/>
+                            <constraint firstItem="yTD-Ob-HM8" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="KRO-Cj-BPO"/>
+                            <constraint firstItem="yTD-Ob-HM8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="LO4-ty-Hfs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KWy-if-Btp" secondAttribute="trailing" constant="20" id="h68-gF-2md"/>
+                            <constraint firstItem="4K1-FL-hWQ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="oBS-Vf-JsF"/>
+                            <constraint firstItem="yTD-Ob-HM8" firstAttribute="top" secondItem="KWy-if-Btp" secondAttribute="bottom" constant="20" id="oLL-xq-gE7"/>
+                            <constraint firstItem="yTD-Ob-HM8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="t9R-1z-qkY"/>
+                            <constraint firstItem="4K1-FL-hWQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vel-Ze-FLi"/>
+                            <constraint firstItem="4K1-FL-hWQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wOU-PH-CNP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="classificationLabel" destination="8ag-A8-IXW" id="kdX-qG-9Fa"/>
+                        <outlet property="imageView" destination="4K1-FL-hWQ" id="FW2-Na-ScS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
